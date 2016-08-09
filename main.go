@@ -17,6 +17,7 @@ func main() {
 	app.Author = "https://github.com/opencredo OpenCredo - Nicki Watt"
 	app.Commands = []cli.Command{
 		vaultAutoConfigCommand(newTerraHelperFunc()),
+		serverCommand(newTerraHelperFunc()),
 		encryptCommand(newTerraHelperFunc()),
 		decryptCommand(newTerraHelperFunc()),
 		maskCommand(),
