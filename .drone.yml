@@ -1,5 +1,7 @@
 build:
   image: golang
   commands:
-    - go build
-    - go test
+    - mkdir /drone/src/github.com/opencredo
+    - ln -s /drone/src/github.com/mileswilson/terrahelp /drone/src/github.com/opencredo/terrahelp
+    - go build -o ./bin/terrahelp
+    - go test ./...
